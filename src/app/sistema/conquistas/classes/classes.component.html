@@ -1,0 +1,192 @@
+<div class="row">
+  <div class="col-sm-2 barra_lateral_esq">
+
+  </div>
+  <div class="col-sm-8">
+    <div class="container">
+      <h2 class="Classe_titulo d-flex justify-content-center" >Classes Conquistadas</h2>
+
+      <div class="row">
+        <div class="col-sm-4">
+          <div *ngIf="classeAmigo; else classeAmigoVazia">
+            <img src="/assets/painel_images/classes/amigo.png" width="40%" height="25%" class="img_class"  alt="amigo"/>
+          </div>
+          <ng-template #classeAmigoVazia>
+              <img [src]="classeVazia" width="43%" height="72%" class="img_class"  alt="vazio"/>
+          </ng-template>
+          <h4 class="d-flex justify-content-center" >Amigo</h4>
+        </div>
+        <div class="col-sm-4">
+          <div *ngIf="classeCompanheiro; else classeCompanheiroVazia">
+              <img src="/assets/painel_images/classes/companheiro.png" width="40%" height="25%" class="img_class"  alt="amigo"/>
+          </div>
+          <ng-template #classeCompanheiroVazia>
+              <img [src]="classeVazia" width="43%" height="72%" class="img_class"  alt="vazio"/>
+          </ng-template>
+          <h4 class="d-flex justify-content-center">Companheiro</h4>
+        </div>
+        <div class="col-sm-4">
+          <div *ngIf="classePesquisador; else classePesquisadorVazia">
+              <img src="/assets/painel_images/classes/pesquisador.png" width="40%" height="25%" class="img_class"  alt="amigo"/>
+          </div>
+          <ng-template #classePesquisadorVazia>
+              <img [src]="classeVazia" width="43%" height="72%" class="img_class"  alt="vazio"/>
+          </ng-template>
+          <h4 class="d-flex justify-content-center">Pesquisador</h4>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-sm-4">
+            <div *ngIf="classePioneiro; else classePioneiroVazia">
+                <img src="/assets/painel_images/classes/pioneiro.png" width="40%" height="25%" class="img_class"  alt="amigo"/>
+            </div>
+            <ng-template #classePioneiroVazia>
+                <img [src]="classeVazia" width="43%" height="72%" class="img_class"  alt="vazio"/>
+            </ng-template>
+          <h4 class="d-flex justify-content-center" >Pioneiro</h4>
+        </div>
+        <div class="col-sm-4">
+            <div *ngIf="classeExcurcionista; else classeExcurcionistaVazia">
+                <img src="/assets/painel_images/classes/excurcionista.png" width="40%" height="25%" class="img_class"  alt="amigo"/>
+            </div>
+            <ng-template #classeExcurcionistaVazia>
+                <img [src]="classeVazia" width="43%" height="72%" class="img_class"  alt="vazio"/>
+            </ng-template>
+            <h4 class="d-flex justify-content-center" >Excurcionista</h4>
+        </div>
+        <div class="col-sm-4">
+            <div *ngIf="classeGuia; else classeGuiaVazia">
+                <img src="/assets/painel_images/classes/guia.png" width="40%" height="25%" class="img_class"  alt="amigo"/>
+            </div>
+            <ng-template #classeGuiaVazia>
+                <img [src]="classeVazia" width="43%" height="72%" class="img_class"  alt="vazio"/>
+            </ng-template>
+            <h4 class="d-flex justify-content-center" >Guia</h4>
+        </div>
+      </div>
+
+
+      <!-- Classes Avançadas  -->
+
+      <div class="row" id="linha_classe_avancada" *ngIf="possuiAvancada" >
+
+        <div class="col-sm-4">
+            <div *ngIf="classeAmigoAvancada; else classeAmigoAvancadaVazia">
+                <img src="/assets/painel_images/classes/amigo_avancada.png" width="40%" height="25%" class="img_class"  alt="com_avan"/>
+            </div>
+            <ng-template #classeAmigoAvancadaVazia>
+                <img [src]="classeVazia" width="43%" height="72%" class="img_class"  alt="vazio"/>
+            </ng-template>
+            <h4 class="d-flex justify-content-center" >Amigo Avançada</h4>
+        </div>
+
+        <div class="col-sm-4">
+          <div *ngIf="classeCompanheiroAvancada; else classeCompanheiroAvancadaVazia">
+            <img src="/assets/painel_images/classes/companheiro_avancada.png" width="40%" height="25%" class="img_class"  alt="con_avan"/>
+          </div>
+          <ng-template #classeCompanheiroAvancadaVazia>
+              <img [src]="classeVazia" width="43%" height="72%" class="img_class"  alt="vazio"/>
+          </ng-template>
+          <h4 class="d-flex justify-content-center" >Companheiro Avançada</h4>
+        </div>
+
+        <div class="col-sm-4">
+            <div *ngIf="classePesquisadorAvancada; else classePesquisadorAvancadaVazia">
+              <img src="/assets/painel_images/classes/pesquisador_avancada.png" width="40%" height="25%" class="img_class"  alt="pes_avan"/>
+            </div>
+            <ng-template #classePesquisadorAvancadaVazia>
+                <img [src]="classeVazia" width="43%" height="72%" class="img_class"  alt="vazio"/>
+            </ng-template>
+            <h4 class="d-flex justify-content-center" >Pesquisador Avançada</h4>
+        </div>
+      </div>
+
+      <div class="row" *ngIf="possuiAvancada">
+        <div class="col-sm-4">
+            <div *ngIf="classePioneiroAvancada; else classePioneiroAvancadaVazia">
+              <img src="/assets/painel_images/classes/pioneiro_avancada.png" width="40%" height="25%" class="img_class"  alt="pio_avan"/>
+            </div>
+            <ng-template #classePioneiroAvancadaVazia>
+                <img [src]="classeVazia" width="43%" height="72%" class="img_class"  alt="vazio"/>
+            </ng-template>
+            <h4 class="d-flex justify-content-center" >Pioneiro Avançada</h4>
+        </div>
+
+        <div class="col-sm-4">
+            <div *ngIf="classeExcurcionistaAvancada; else classeExcurcionistaAvancadaVazia">
+              <img src="/assets/painel_images/classes/excurcionista_avancada.png" width="40%" height="25%" class="img_class"  alt="excur_avan"/>
+            </div>
+            <ng-template #classeExcurcionistaAvancadaVazia>
+                <img [src]="classeVazia" width="43%" height="72%" class="img_class"  alt="vazio"/>
+            </ng-template>
+            <h4 class="d-flex justify-content-center" >Excurcionista Avançada</h4>
+        </div>
+
+        <div class="col-sm-4">
+            <div *ngIf="classeGuiaAvancada; else classeGuiaAvancadaVazia">
+              <img src="/assets/painel_images/classes/guia_avancada.png" width="40%" height="25%" class="img_class"  alt="excurcionista avançada"/>
+            </div>
+            <ng-template #classeGuiaAvancadaVazia>
+                <img [src]="classeVazia" width="43%" height="72%" class="img_class"  alt="vazio"/>
+            </ng-template>
+            <h4 class="d-flex justify-content-center" >Guia Avançada</h4>
+        </div>
+      </div>
+
+      <div class="row" *ngIf="classeExcelencia">
+          <div class="col-sm-4"></div>
+          <div class="col-sm-4">
+              <div *ngIf="classeExcelencia; else classeExcelenciaVazia">
+                <img src="/assets/painel_images/classes/excelencia.png" width="40%" height="25%" class="img_class"  alt="excelencia"/>
+              </div>
+              <ng-template #classeExcelenciaVazia>
+                  <img [src]="classeVazia" width="43%" height="72%" class="img_class"  alt="vazio"/>
+              </ng-template>
+              <h4 class="d-flex justify-content-center" >Excelencia</h4>
+          </div>
+          <div class="col-sm-4"></div>
+
+      </div>
+
+      <div class="row" *ngIf="possuiMedalha" >
+
+          <div class="col-sm-4">
+              <div *ngIf="medalhaBronze; else medalhaBronzeVazia">
+                <img src="/assets/painel_images/classes/medalha_bronze.jpg" width="40%" height="25%" class="img_class"  alt="bronze"/>
+              </div>
+              <ng-template #medalhaBronzeVazia>
+                  <img [src]="classeVazia" width="43%" height="72%" class="img_class"  alt="vazio"/>
+              </ng-template>
+              <h4 class="d-flex justify-content-center" >Medalha de Bronze</h4>
+          </div>
+
+          <div class="col-sm-4">
+              <div *ngIf="medalhaPrata; else medalhaPrataVazia">
+                <img src="/assets/painel_images/classes/medalha_prata.jpg" width="40%" height="25%" class="img_class"  alt="prata"/>
+              </div>
+              <ng-template #medalhaPrataVazia>
+                  <img [src]="classeVazia" width="43%" height="72%" class="img_class"  alt="vazio"/>
+              </ng-template>
+              <h4 class="d-flex justify-content-center" >Medalha de Prata</h4>
+          </div>
+
+          <div class="col-sm-4">
+              <div *ngIf="medalhaOuro; else medalhaOuroVazia">
+                <img src="/assets/painel_images/classes/medalha_ouro.jpg" width="40%" height="25%" class="img_class"  alt="ouro"/>
+              </div>
+              <ng-template #medalhaOuroVazia>
+                  <img [src]="classeVazia" width="43%" height="72%" class="img_class"  alt="vazio"/>
+              </ng-template>
+              <h4 class="d-flex justify-content-center" >Medalha de Prata</h4>
+          </div>
+
+      </div>
+
+
+    </div>
+  </div>
+  <div class="col-sm-2 barra_lateral_dir">
+
+  </div>
+</div>

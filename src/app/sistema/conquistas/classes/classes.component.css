@@ -1,0 +1,26 @@
+.barra_lateral_esq {
+  background-color: #0000ff;
+}
+
+.barra_lateral_dir {
+  background-color: #e60000;
+}
+
+.container {
+  padding: 5%;
+}
+
+.Classe_titulo {
+  margin-top: 3%;
+  margin-bottom: 15%;
+  font-size: 60px;
+  font-weight: bold;
+}
+
+.img_class {
+  margin-left: 30%;
+}
+
+.linha_classe_avancada {
+  margin-top: 12%;
+}

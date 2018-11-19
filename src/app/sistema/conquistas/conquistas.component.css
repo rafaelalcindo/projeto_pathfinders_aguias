@@ -1,0 +1,39 @@
+.barra_lateral_esq {
+  background-color: #0000ff;
+}
+
+.barra_lateral_dir {
+  background-color: #e60000;
+}
+
+.container {
+  padding: 5%;
+}
+
+.classes {
+  margin-top: 35%;
+  font-size: 19px;
+}
+
+.FraseInicial {
+  font-size: 90px;
+}
+
+.background_footer {
+  height: 420px;
+  background-image: url('/assets/imagens_site_desbravador/curtir_especialidades.png');
+}
+
+
+/*  mundaça nos componentes bootstrap */
+
+.card {
+  word-wrap: inherit;
+  border-radius: 0%;
+  cursor: pointer;
+  /*margin-right: -35%; */
+}
+
+.card:hover {
+  box-shadow: 2px 5px 4px 2px #e6e6e6;
+}

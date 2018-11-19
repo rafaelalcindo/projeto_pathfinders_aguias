@@ -1,0 +1,40 @@
+<div class="tudao">
+  <div class="container">
+    <div class="row justify-content-md-center">
+
+      <div class="col-md-auto">
+        <div class="todo_telalogin" [@logintela]="estadoLoginTela">
+          <div class="titulo_login" >
+            <h4 style="color: white;">Entrar</h4>
+          </div>
+          <div class="form_login" >
+
+            <form novalidate #formulario="ngForm" (ngSubmit)="logarUsuario()" >
+                <label>Login:</label>
+                <input type="text" class="form-control" id="login" name="login"
+                 minlength="3"
+                 required
+                 ngModel
+                 placeholder="Digite seu login" />
+                <br/>
+                <label>Senha:</label>
+                <input type="password" class="form-control" id="senha" name="senha"
+                  minlength="4"
+                  required
+                  ngModel
+                 placeholder="Digite a sua Senha" />
+                <br/>
+                <div class="row">
+                  <div class="col-9"></div>
+                  <div class="col-3">
+                    <button type="submit" class="btn btn-primary" id="btn_entrar" >Entrar</button>
+                  </div>
+                </div>
+            </form>
+          </div>
+        </div>
+      </div>
+      <div class="col col-lg-1"></div>
+    </div>
+  </div>
+</div>

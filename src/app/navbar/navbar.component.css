@@ -1,0 +1,22 @@
+#nav_logo{
+ margin-top: 2px;
+ height: 60px;
+ border-radius: 70%;
+}
+
+.brand-logo{
+    margin-left: 40px;
+}
+
+.bg-navColor{
+  background-color: #0000b3;
+}
+
+
+.navbar-light .navbar-brand{
+  color: white;
+}
+
+.navbar-light .navbar-nav .nav-link{
+  color: white;
+}

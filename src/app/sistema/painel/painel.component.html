@@ -1,0 +1,121 @@
+<div class="container">
+
+
+  <div class="row" *ngIf="desbravador">
+
+    <div class="col-sm-4">
+      <div class="card">
+        <div class="card-body">
+          <div class="row" id="coins_imagem" >
+            <div class="col-sm-6">
+                <img src="/assets/painel_images/coin_aguias.jpg" width="120px" height="120px" class="" alt="aguias" />
+            </div>
+            <div class="col-sm-6">
+                <h1 class="coin" >{{ desbravador[0]?.aguitos }}</h1>
+            </div>
+
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+
+    <div class="col-sm-4">
+        <div class="card">
+            <div class="card-body">
+              <div class="row" id="coins_imagem" >
+                <div class="col-sm-6">
+                    <img src="/assets/painel_images/aguia_negra.jpg" width="110px" height="110px" class="img-thumbnail" alt="aguias" />
+                </div>
+                <div class="col-sm-6">
+                    <h2 class="unidade">{{ desbravador[0].unidade }}</h2>
+                </div>
+
+              </div>
+
+            </div>
+          </div>
+    </div>
+
+
+    <div class="col-sm-4">
+        <div class="card">
+            <div class="card-body">
+              <div class="row" id="coins_imagem" >
+                <div class="col-sm-6">
+                    <img src="/assets/painel_images/unidade_pontuacao.jpg" width="80px" height="80px" class="img-thumbnail" alt="aguias" />
+                    <p>P. Unidade</p>
+                </div>
+                <div class="col-sm-6">
+                    <h2 class="ponto_unidade">{{ desbravador[0].pontuacao_unidade }}</h2>
+                </div>
+
+              </div>
+
+            </div>
+          </div>
+    </div>
+
+
+  </div>
+
+  <div class="row opcoes_menu" >
+    <div class="col-sm">
+      <div class="card">
+        <div class="card-body">
+
+          <h3>Opções:</h3>
+
+          <div class="row opcao_row" >
+
+            <div class="col-sm">
+              <div class="card conquista" (click)="conquistas()"  >
+                <div class="card-body">
+                  <div class="row">
+                    <div class="col-sm">
+                        <img src="/assets/painel_images/dsb_agrupadas.png" width="120px" height="120px" class="" alt="conquistas" />
+                    </div>
+                    <div class="col-sm ">
+                      <h3 class="escrito_conquista" >Conquistas</h3>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-sm">
+                <div class="card presenca">
+                    <div class="card-body ">
+                      <div class="row">
+                        <div class="col-sm">
+                            <img src="/assets/painel_images/lista_icon.png" width="120px" height="120px" class="" alt="conquistas" />
+                        </div>
+                        <div class="col-sm ">
+                          <h3 class="escrito_conquista" >Presença</h3>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+            </div>
+            <div class="col-sm">
+              <div class="card eventos">
+                  <div class="card-body">
+                    <div class="row">
+                      <div class="col-sm">
+                          <img src="/assets/painel_images/calendario_icon.png" width="120px" height="120px" class="" alt="conquistas" />
+                      </div>
+                      <div class="col-sm ">
+                        <h3 class="escrito_conquista" >Eventos</h3>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>
