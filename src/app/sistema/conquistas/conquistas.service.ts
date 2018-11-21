@@ -29,4 +29,11 @@ export class ConquistaService {
       .map((resposta: any) => resposta.json() );
   }
 
+  public getConquistasDesbravador(id: string): Observable<any> {
+      let body = new URLSearchParams();
+      body.set('id', id);
+      return this.http.post(`${URL_API}/infoConquistaDesbravador`, body)
+        .map((resposta: any) => resposta.json() );
+  }
+
 }

@@ -25,6 +25,7 @@ import { PainelComponent } from './sistema/painel/painel.component';
 import { ConquistasComponent } from './sistema/conquistas/conquistas.component';
 import { ClassesComponent } from './sistema/conquistas/classes/classes.component';
 import { EspecialidadesComponent } from './sistema/conquistas/especialidades/especialidades.component';
+import { ConquistasApartComponent } from './sistema/conquistas/conquistas-apart/conquistas-apart.component';
 //import { Autenticacao } from './sistema/auth_guard/autenticacao.service';
 
 
@@ -42,6 +43,7 @@ import { EspecialidadesComponent } from './sistema/conquistas/especialidades/esp
     ConquistasComponent,
     ClassesComponent,
     EspecialidadesComponent,
+    ConquistasApartComponent,
 
   ],
   imports: [

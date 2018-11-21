@@ -15,10 +15,15 @@
     <div class="head_estudosNatureza" >
       <h1 class="head_estudosNatureza_title" >Estudos da Natureza</h1>
     </div>
-    <h1>entrou estudos natureza</h1>
-  </div>
-  <div class="row" >
 
+    <div class="row" >
+      <div class="col-sm-2" *ngFor="let natureza of fillEstudosNatureza" >
+        <img src="{{ natureza.linkImagem }}" alt="{{natureza.nomeEspecialidade}}" />
+        <h4>{{ natureza.nomeEspecialidade }}</h4>
+      </div>
+    </div>
   </div>
+
+
 
 </div>

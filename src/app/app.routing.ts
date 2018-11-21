@@ -9,6 +9,8 @@ import { PainelComponent } from './sistema/painel/painel.component';
 import { ConquistasComponent } from './sistema/conquistas/conquistas.component';
 import { ClassesComponent } from './sistema/conquistas/classes/classes.component';
 import { EspecialidadesComponent } from './sistema/conquistas/especialidades/especialidades.component';
+import { ConquistasApartComponent } from './sistema/conquistas/conquistas-apart/conquistas-apart.component';
+
 
 import { AutenticacaoGuard } from './sistema/auth_guard/auth_guard.service';
 
@@ -23,7 +25,8 @@ const APP_ROUTES: Routes = [
     { path: 'painel', component: PainelComponent, canActivate: [AutenticacaoGuard] },
     { path: 'conquistaPessoal', component: ConquistasComponent, canActivate: [AutenticacaoGuard] },
     { path: 'conquistas/classes', component: ClassesComponent, canActivate: [AutenticacaoGuard] },
-    { path: 'conquistas/especialidades', component: EspecialidadesComponent, canActivate: [AutenticacaoGuard] }
+    { path: 'conquistas/especialidades', component: EspecialidadesComponent, canActivate: [AutenticacaoGuard] },
+    { path: 'conquista/conquistaApart', component: ConquistasApartComponent, canActivate: [AutenticacaoGuard] }
 
 ];
 
