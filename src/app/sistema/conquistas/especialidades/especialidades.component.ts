@@ -2,12 +2,17 @@ import { Router } from '@angular/router';
 import { Component, OnInit } from '@angular/core';
 import { ConquistaService } from './../conquistas.service';
 
+import {EspecialidadeImagem} from './EspecialidadeImagem/especialidadeImage';
+import {EspecialidadeNatureza} from './EspecialidadeImagem/esepecialidadeImage-mock';
+
 @Component({
   selector: 'app-especialidades',
   templateUrl: './especialidades.component.html',
   styleUrls: ['./especialidades.component.css']
 })
 export class EspecialidadesComponent implements OnInit {
+
+  public especialidadeNatureza: EspecialidadeImagem[] = EspecialidadeNatureza;
 
   public especialidadeDesbravador: any[];
 
@@ -21,6 +26,8 @@ export class EspecialidadesComponent implements OnInit {
   public temHabilidadesDomesticas: any[] = [];
   public temMestrado: any[] = [];
 
+  public fillEstudosNatureza: EspecialidadeImagem[] = [];
+
   constructor(
     private conquistaServices: ConquistaService,
     private route: Router
@@ -33,7 +40,8 @@ export class EspecialidadesComponent implements OnInit {
         .subscribe((resposta: any) => {
           this.especialidadeDesbravador = resposta;
           this.verificarEspecialidades(this.especialidadeDesbravador);
-          console.log('estudos Natureza : ', this.temEstudosNatureza);
+          this.exibirEspecialidades();
+          console.log('fill natureza: ', this.fillEstudosNatureza);
         } );
     } else {
       this.route.navigate(['/']);
@@ -67,6 +75,26 @@ export class EspecialidadesComponent implements OnInit {
     } else if ( especialidade.area === 'Mestrados' ) {
       this.temMestrado.push(especialidade);
     }
+  }
+
+  public exibirEspecialidades(): void {
+
+
+    if ( this.temEstudosNatureza.length > 0 ) {
+      this.temEstudosNatureza.map(estudos => {
+
+         this.especialidadeNatureza.map(especi => {
+          //console.log('nome especi: ', especi.nomeEspecialidade);
+          //console.log('estudos natureza: ', estudos.especialidade);
+            if ( especi.nomeEspecialidade === estudos.especialidade.toString()) {
+              this.fillEstudosNatureza.push(especi);
+            }
+        });
+
+      });
+    } // Fim do filtro estudos da Natureza.
+
+
   }
 
 
