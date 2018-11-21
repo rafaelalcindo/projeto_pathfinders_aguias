@@ -11,15 +11,15 @@ export class EspecialidadesComponent implements OnInit {
 
   public especialidadeDesbravador: any[];
 
-  public temADRA: any[];
-  public temEstudosNatureza: any[];
-  public temAtividadesRecreativa: any[];
-  public temAtividadesProfissionais: any[];
-  public temCienciaESaude: any[];
-  public temAtividadesMissionarias: any[];
-  public temHabilidadesManuais: any[];
-  public temHabilidadesDomesticas: any[];
-  public temMestrado: any[];
+  public temADRA: any[] = [];
+  public temEstudosNatureza: any[] = [];
+  public temAtividadesRecreativa: any[] = [];
+  public temAtividadesProfissionais: any[] = [];
+  public temCienciaESaude: any[] = [];
+  public temAtividadesMissionarias: any[] = [];
+  public temHabilidadesManuais: any[] = [];
+  public temHabilidadesDomesticas: any[] = [];
+  public temMestrado: any[] = [];
 
   constructor(
     private conquistaServices: ConquistaService,
@@ -33,6 +33,7 @@ export class EspecialidadesComponent implements OnInit {
         .subscribe((resposta: any) => {
           this.especialidadeDesbravador = resposta;
           this.verificarEspecialidades(this.especialidadeDesbravador);
+          console.log('estudos Natureza : ', this.temEstudosNatureza);
         } );
     } else {
       this.route.navigate(['/']);
@@ -48,26 +49,24 @@ export class EspecialidadesComponent implements OnInit {
 
   public AdicionarEspecialidadeCategoria(especialidade): void {
     if (especialidade.area === 'Estudos da Natureza' ) {
-      this.temEstudosNatureza = especialidade;
+      this.temEstudosNatureza.push(especialidade);
     } else if (especialidade.area === 'ADRA') {
-      this.temADRA = especialidade;
+      this.temADRA.push(especialidade);
     } else if ( especialidade.area === 'Atividades Recreativa') {
-      this.temAtividadesRecreativa = especialidade;
+      this.temAtividadesRecreativa.push(especialidade);
     } else if ( especialidade.area === 'Atividades Recreativa' ) {
-      this.temAtividadesMissionarias = especialidade;
+      this.temAtividadesMissionarias.push(especialidade);
     } else if ( especialidade.area === 'Atividades Profissionais' ) {
-      this.temAtividadesProfissionais = especialidade;
+      this.temAtividadesProfissionais.push(especialidade);
     } else if ( especialidade.area === 'Ciência e Saúde' ) {
-      this.temCienciaESaude = especialidade;
+      this.temCienciaESaude.push(especialidade);
     } else if ( especialidade.area === 'Habilidades Manuais' ) {
-      this.temHabilidadesManuais = especialidade;
+      this.temHabilidadesManuais.push(especialidade);
     } else if ( especialidade.area === 'Habilidades Domésticas' ) {
-      this.temHabilidadesDomesticas = especialidade;
+      this.temHabilidadesDomesticas.push(especialidade);
     } else if ( especialidade.area === 'Mestrados' ) {
-      this.temMestrado = especialidade;
+      this.temMestrado.push(especialidade);
     }
-
-    console.log('Especialidade estudos Natureza : ', this.temEstudosNatureza);
   }
 
 
