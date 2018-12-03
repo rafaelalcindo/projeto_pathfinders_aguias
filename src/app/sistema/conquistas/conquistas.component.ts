@@ -22,4 +22,12 @@ export class ConquistasComponent implements OnInit {
     this.router.navigate(['/conquistas/classes']);
   }
 
+  public conquistaEspecialidade(): void {
+    this.router.navigate(['/conquistas/especialidades']);
+  }
+
+  public conquistaConquista(): void {
+    this.router.navigate(['/conquista/conquistaApart']);
+  }
+
 }

@@ -26,7 +26,8 @@ const APP_ROUTES: Routes = [
     { path: 'conquistaPessoal', component: ConquistasComponent, canActivate: [AutenticacaoGuard] },
     { path: 'conquistas/classes', component: ClassesComponent, canActivate: [AutenticacaoGuard] },
     { path: 'conquistas/especialidades', component: EspecialidadesComponent, canActivate: [AutenticacaoGuard] },
-    { path: 'conquista/conquistaApart', component: ConquistasApartComponent, canActivate: [AutenticacaoGuard] }
+    { path: 'conquista/conquistaApart', component: ConquistasApartComponent, canActivate: [AutenticacaoGuard] },
+
 
 ];
 
